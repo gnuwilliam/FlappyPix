@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+       <head>
+              <title>FlappyPix</title>
+              <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+              <link href="styles.css" rel="stylesheet" type="text/css">
+              <script src="soundmanager2-setup.js"></script>  
+  			  <script src="soundmanager2-jsmin.js"></script> 
+       </head>
+       
+       <body style="background-color: #ACA7D7"y>
+              <center>
+                  <h1 style="font-family: Helvetica, sans-serif;
+                      margin: 0;
+                      font-size: 48px;
+                      color: #FFF;
+                      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);">FlappyPix</h1> <small style="display: inline-block;
+                      margin: 15px 0;
+                      font-size: 16px;
+                      font-family: Helvetica, sans-serif;
+                      color: #FFF;
+                      background-color: #746DB1;
+                      padding: 5px 10px;">by <a href="https://github.com/gnuwilliam" style="color: #C0FF00">gnuwilliam</a></small>
+              </center>
+              <div align="center" id="embed-html"></div>
+              <script type="text/javascript" src="html/html.nocache.js"></script>
+       </body>
+       
+       <script>
+              function handleMouseDown(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = 'default';
+              }
+              
+              function handleMouseUp(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = '';
+              }
+              document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
+              document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+       </script>
+</html>
